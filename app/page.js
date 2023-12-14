@@ -1,95 +1,64 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import brandLogo from '@/assets/images/brandIcon.png';
+import reviewLogo from '@/assets/images/review.png';
+import serviceLogo from '@/assets/images/services.png';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className='container'>
+      <div className='row mt-4 mx-auto justify-content-center'>
+        <div className='col-md-2'>
+          <Image src={brandLogo.src} width={100} height={100} alt='Brand logo' />
+        </div>
+
+        <div className='col-md-6'>
+          <h1>Welcome to Laptopia!</h1>
+          <p>
+            Laptopia is your one-stop destination for buying and selling used laptops. Whether you're a student,
+            professional, or tech enthusiast, we have a wide range of laptops to meet your needs.
+          </p>
         </div>
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className='row mt-4 mx-auto justify-content-center'>
+        <div className='col-md-2'>
+          <Image src={serviceLogo.src} width={100} height={100} alt='service logo' />
+        </div>
+        <div className='col-md-6'>
+          <h2>Our Services</h2>
+          <ul>
+            <li>Buy high-quality used laptops at affordable prices</li>
+            <li>Sell your old laptops and get the best value</li>
+            <li>Trade-in your current laptop for an upgrade</li>
+            <li>Explore our collection of accessories and peripherals</li>
+            <li>Get expert advice and support from our team</li>
+          </ul>
+        </div>
       </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+      <div className='row mt-4 mx-auto justify-content-center'>
+        <div className='col-md-2'>
+          <Image src={reviewLogo.src} width={100} height={100} alt='Review Logo' />
+        </div>
+        <div className='col-md-6'>
+          <h2>User Feedback and Reviews</h2>
+          <p className='card bg-dark p-2 mt-4'>
+            "I recently purchased a laptop from Laptopia and I am extremely satisfied with my purchase. The laptop was
+            in excellent condition and the price was very reasonable. The customer service was also top-notch, with the
+            staff being knowledgeable and helpful throughout the process. ~ Ravi"
           </p>
-        </a>
+          <p className='card bg-dark  p-2'>
+            "I sold my old laptop to Laptopia and I couldn't be happier with the experience. The process was quick and
+            hassle-free, and I received a fair price for my laptop. I would highly recommend Laptopia to anyone looking
+            to buy or sell used laptops. ~ Anne"
+          </p>
+          <p className='card bg-dark  p-2'>
+            "Laptopia has a great selection of laptops and accessories. I was able to find the perfect laptop for my
+            needs at a great price. The website is easy to navigate and the ordering process was smooth. I would
+            definitely shop at Laptopia again. ~ Rohit"
+          </p>
+        </div>
       </div>
-    </main>
-  )
+    </div>
+  );
 }
