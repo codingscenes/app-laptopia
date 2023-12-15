@@ -17,6 +17,20 @@ import { notFound } from 'next/navigation';
 //   createdAt: '1702389895598',
 // };
 
+export async function generateMetadata({ params }) {
+  // data from database
+  const product = await getProductBySlug(params.productSlug);
+
+  if (!product) {
+    notFound();
+  }
+
+  return {
+    title: product.name,
+    description: product.description,
+  };
+}
+
 export default async function ProductDetailPage({ params }) {
   const product = await getProductBySlug(params.productSlug);
   if (!product) {

@@ -90,6 +90,7 @@ async function Products() {
   return products.map((product) => <ProductItem product={product} key={product.id} />);
 }
 export default async function ProductsPage() {
+  console.log('Executing Product Page!');
   return (
     <div className='container mt-4'>
       <div className='row'>
